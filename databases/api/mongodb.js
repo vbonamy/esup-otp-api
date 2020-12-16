@@ -194,7 +194,7 @@ exports.parse_user = function (user) {
     //}
     // parsed_user.matrix.active = user.matrix.active;
     if(properties.getMethod('push').activate){
-        if(user.push.active)parsed_user.waitingFor = true;
+        if(user.push.active) parsed_user.waitingFor = true;
         parsed_user.push = {
             device : {
                 platform : user.push.device.platform,
@@ -210,6 +210,14 @@ exports.parse_user = function (user) {
             qrCode : '',
             active : user.push.active,
             transports: available_transports(user.push.transports, "push")
+        };
+    }
+    if (properties.getMethod('esupnfc').activate) {
+	// TODO
+        // if(user.esupnfc.active) parsed_user.waitingFor = true;
+        parsed_user.esupnfc = {
+            active: user.esupnfc.active,
+            transports: available_transports(user.esupnfc.transports, 'esupnfc')
         };
     }
     return parsed_user;

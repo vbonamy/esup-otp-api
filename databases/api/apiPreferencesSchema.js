@@ -68,5 +68,16 @@ exports.schema = {
         "transports": {
             type: Array,
         }
+    },
+    "esupnfc": {
+        "serverKey": {
+            type: String,
+        },
+        "activate": {
+            type: Boolean,
+        },
+        "transports": {
+            type: Array,
+        }
     }
 }

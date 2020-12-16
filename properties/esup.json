@@ -76,6 +76,9 @@
     "sms": {
         "url": "https://esup-otp-api:chat auto air@sms.univ-paris1.fr/esup-smsuapi/?action=SendSms&phoneNumber=$phoneNumber$&message=$message$"
     },
+    "esupnfc": {
+	"server_ip": "10.0.0.2"
+    },
     "logs" :{
         "path" :"/../logs/",
         "debug_filename" : "debug.log",
